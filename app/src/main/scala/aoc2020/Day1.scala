@@ -9,11 +9,13 @@ class Day1(inputFile: String) {
       if x + y == 2020
     } yield (x * y))(0).toString
 
-  def part2: String =
+  def part2: String = {
     (for {
       x <- input
       y <- input
       z <- input
       if x + y + z == 2020
     } yield (x * y * z))(0).toString
+  }
+  def printSolution = println(s"Part 1: ${part1}\nPart 2: ${part2}")
 }

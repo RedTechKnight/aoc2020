@@ -16,6 +16,8 @@ class Day2(inputFile: String) {
           new Validator(line)
             .isValidPasswordPart2(line.dropWhile(_ != ':').drop(2)))
       .toString
+  def printSolution = println(s"Part 1: ${part1}\nPart 2: ${part2}")
+
 }
 
 class Validator(pattern: String) {
@@ -28,9 +30,5 @@ class Validator(pattern: String) {
       && password.count(_ == targetChar) <= max)
 
   def isValidPasswordPart2(password: String): Boolean =
-    (password(min - 1) == targetChar, password(max - 1) == targetChar) match {
-      case (true, false) => true
-      case (false, true) => true
-      case _             => false
-    }
+    (password(min - 1) == targetChar) != (password(max - 1) == targetChar)
 }
