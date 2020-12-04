@@ -1,8 +1,7 @@
 package aoc2020
 import scala.io.Source
 class Day3(inputFile: String) {
-  val input = new Grid(
-    Source.fromFile(inputFile).getLines().toList)
+  val input = new Grid(Source.fromFile(inputFile).getLines().toList)
   def part1: String = input.check(3, 1).toString
   def part2: String =
     List(input.check(1, 1),
@@ -23,6 +22,6 @@ class Grid(source: List[String]) {
       .sliding(1, yStep)
       .map(_(0))
       .zipWithIndex
-      .count(_ match { case (line, ind) => line((ind*xStep) % width) == '#' })
+      .count(_ match { case (line, ind) => line((ind * xStep) % width) == '#' })
   }
 }
