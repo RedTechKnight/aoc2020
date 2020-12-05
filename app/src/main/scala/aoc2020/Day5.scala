@@ -17,7 +17,8 @@ class Day5(inputFile: String) extends DaySolution {
         if (l.length > 1) {
           l(1) - l(0) > 1
         } else false)
-      .map(_ match {case (x :: _) => x+1}).toString
+      .map(_ match { case (x :: _) => x + 1 })
+      .toString
 
   class SeatIdentifier(input: String) {
     val (rowDirs, colDirs) = (input.take(7), input.drop(7))
@@ -30,8 +31,10 @@ class Day5(inputFile: String) extends DaySolution {
         positions(0)
       } else {
         dirs(0) match {
-          case 'F' | 'L' => locate(dirs.drop(1), positions.take(positions.length / 2))
-          case 'B' | 'R' => locate(dirs.drop(1), positions.drop(positions.length / 2))
+          case 'F' | 'L' =>
+            locate(dirs.drop(1), positions.take(positions.length / 2))
+          case 'B' | 'R' =>
+            locate(dirs.drop(1), positions.drop(positions.length / 2))
         }
       }
   }
