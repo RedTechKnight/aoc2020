@@ -8,9 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.scala-lang:scala-library:2.13.3")
-    implementation("com.google.guava:guava:29.0-jre")
-
+    implementation("org.scala-lang:scala-library:2.13.4")
 }
 
 application {

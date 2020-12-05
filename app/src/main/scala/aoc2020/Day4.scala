@@ -3,11 +3,10 @@ package aoc2020
 import scala.io.Source
 import scala.util.{Success, Try}
 
-class Day4(inputFile: String) {
+class Day4(inputFile: String) extends DaySolution {
   val input = new Validator(Source.fromFile(inputFile).getLines().toList)
-  def part1 = input.batchesWithNeededFields.length
-  def part2 = input.validBatches
-  def printSolution = println(s"Part 1: ${part1}\nPart 2: ${part2}")
+  def part1 = input.batchesWithNeededFields.length.toString
+  def part2 = input.validBatches.toString
 
   class Validator(input: List[String]) {
     val batches = getBatches(input)

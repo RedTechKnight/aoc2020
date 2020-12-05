@@ -1,6 +1,6 @@
 package aoc2020
 import scala.io.Source
-class Day1(inputFile: String) {
+class Day1(inputFile: String) extends DaySolution {
   val input = Source.fromFile(inputFile).getLines().map(_.toInt).toList
   def part1: String =
     (for {
@@ -17,5 +17,4 @@ class Day1(inputFile: String) {
       if x + y + z == 2020
     } yield (x * y * z))(0).toString
   }
-  def printSolution = println(s"Part 1: ${part1}\nPart 2: ${part2}")
 }

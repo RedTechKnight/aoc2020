@@ -2,7 +2,7 @@ package aoc2020
 
 import scala.io.Source
 
-class Day2(inputFile: String) {
+class Day2(inputFile: String) extends DaySolution {
   val input = Source.fromFile(inputFile).getLines().toList
   def part1: String =
     input
@@ -16,7 +16,7 @@ class Day2(inputFile: String) {
           new Validator(line)
             .isValidPasswordPart2(line.dropWhile(_ != ':').drop(2)))
       .toString
-  def printSolution = println(s"Part 1: ${part1}\nPart 2: ${part2}")
+
   class Validator(pattern: String) {
     val min: Int = pattern.takeWhile(_.isDigit).toInt
     val max: Int =

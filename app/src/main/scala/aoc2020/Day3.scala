@@ -1,6 +1,6 @@
 package aoc2020
 import scala.io.Source
-class Day3(inputFile: String) {
+class Day3(inputFile: String) extends DaySolution {
   val input = new Grid(Source.fromFile(inputFile).getLines().toList)
   def part1: String = input.check(3, 1).toString
   def part2: String =
@@ -9,8 +9,6 @@ class Day3(inputFile: String) {
          input.check(5, 1),
          input.check(7, 1),
          input.check(1, 2)).product.toString
-  def printSolution = println(s"Part 1: ${part1}\nPart 2: ${part2}")
-
 }
 
 class Grid(source: List[String]) {
