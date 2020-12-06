@@ -11,7 +11,8 @@ object App {
       () => new Day3("../inputs/3").printSolution,
       () => new Day4("../inputs/4").printSolution,
       () => new Day5("../inputs/5").printSolution,
-      () => new Day6("../inputs/6").printSolution
+      () => new Day6("../inputs/6").printSolution,
+      () => new Day7("../inputs/7").printSolution
     )
     if (args.length < 1) {
       println(
@@ -24,7 +25,7 @@ object App {
             println(s"Solution for Day ${ind + 1}")
             day()
           }
-        case Success(n) if n <= days.length => days(n-1)()
+        case Success(n) if n <= days.length => days(n - 1)()
         case _ =>
           println(
             s"Enter a number between ${1} and ${days.length} to run that day's solutions, 0 for all of them")
