@@ -12,7 +12,8 @@ object App {
       () => new Day4("../inputs/4").printSolution,
       () => new Day5("../inputs/5").printSolution,
       () => new Day6("../inputs/6").printSolution,
-      () => new Day7("../inputs/7").printSolution
+      () => new Day7("../inputs/7").printSolution,
+      () => new Day8("../inputs/8").printSolution
     )
     if (args.length < 1) {
       println(
